@@ -18,12 +18,20 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
 */
 
 /* Compléter la suite du code */
+
+.carousel {
+  position: relative;
+}
+
+
 .carousel__controls {
+  position: absolute;
+  inset: 0;
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin: 16px 0;
+  pointer-events: none;
+  margin: 0;
 
   /* Utilise flexbox pour aligner les éléments enfants - https://developer.mozilla.org/fr/docs/Web/CSS/display */
   /* Espace entre les éléments enfants 16px- https://developer.mozilla.org/fr/docs/Web/CSS/gap */
@@ -32,13 +40,8 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
   /* Marge de 16px en haut et en bas - https://developer.mozilla.org/fr/docs/Web/CSS/margin */
 }
 .carousel__button {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid;
-  border-radius: 50%;
+  pointer-events: auto;
+
   /* Largeur du bouton 50px - https://developer.mozilla.org/fr/docs/Web/CSS/width */
   /* Hauteur du bouton 50px - https://developer.mozilla.org/fr/docs/Web/CSS/height */
   /* Utilise flexbox pour aligner le contenu du bouton - https://developer.mozilla.org/fr/docs/Web/CSS/display */
